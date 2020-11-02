@@ -48,15 +48,15 @@ void HH16Solver::stepForward(fReal timeStep)
 	// ADVECTION
 	
     KaminoTimer timer;
-    timer.startTimer();
+    //timer.startTimer();
     advection();
-    this->advectionTime += timer.stopTimer();
+    //this->advectionTime += timer.stopTimer();
 
 	// GEOMETRIC
 	
-    timer.startTimer();
+    //timer.startTimer();
     geometric();
-    this->geometricTime += timer.stopTimer();
+    //this->geometricTime += timer.stopTimer();
 
 	// BODY FORCES
 
@@ -64,9 +64,9 @@ void HH16Solver::stepForward(fReal timeStep)
 
 	// PROJECTION
 
-    timer.startTimer();
+    //timer.startTimer();
     projection();
-    this->projectionTime += timer.stopTimer();
+    //this->projectionTime += timer.stopTimer();
     this->timeElapsed += timeStep;
 
 }
@@ -129,7 +129,7 @@ void HH16Solver::swapAttrBuffers()
 // OUTPUT >>>>>>>>>>
 
 
-void HH16Solver::write_data_bgeo(const std::string& s, const int frame)
+/*void HH16Solver::write_data_bgeo(const std::string& s, const int frame)
 {
     std::string file = s + std::to_string(frame) + ".bgeo";
     std::cout << "Writing to: " << file << std::endl;
@@ -187,7 +187,7 @@ void HH16Solver::write_data_bgeo(const std::string& s, const int frame)
     Partio::write(file.c_str(), *parts);
     parts->release();
 }
-
+*/
 void HH16Solver::mapPToSphere(Eigen::Matrix<float, 3, 1>& pos) const
 {
     float theta = pos[1];

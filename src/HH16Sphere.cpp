@@ -21,11 +21,11 @@ void HH16Sphere::run()
     HH16Quantity* u = solver.getAttributeNamed("u");
     HH16Quantity* v = solver.getAttributeNamed("v");
 
-    solver.write_data_bgeo(gridPath, 0);
+    //solver.write_data_bgeo(gridPath, 0);
 
     float T = 0.0;              // simulation time
     KaminoTimer timer;
-    timer.startTimer();
+    //timer.startTimer();
     for(int i = 1; i <= frames; i++){
         while(T < i*DT){
             solver.stepForward(dt);
@@ -34,11 +34,11 @@ void HH16Sphere::run()
         solver.stepForward(dt + i*DT - T);
         T = i*DT;
 
-        solver.write_data_bgeo(gridPath, i);
+        //solver.write_data_bgeo(gridPath, i);
     }
-    float cpu_time = timer.stopTimer();
-    std::cout << "Time spent: " << cpu_time << " seconds" << std::endl;
-    std::cout << "Performance: " << frames / cpu_time << " frames per second" << std::endl;
+    //float cpu_time = timer.stopTimer();
+    //std::cout << "Time spent: " << cpu_time << " seconds" << std::endl;
+    //std::cout << "Performance: " << frames / cpu_time << " frames per second" << std::endl;
 
     std::cout << "check" << std::endl;
 }
