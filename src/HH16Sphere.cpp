@@ -4,29 +4,30 @@
 
 using namespace std;
 
-const size_t width = 1024;
-const size_t height = 512;
+//const size_t width = 1024;
+//const size_t height = 512;
 
-struct color {
+/*struct color {
 	size_t R;
 	size_t G;
 	size_t B;
 	size_t A;
-};
+};*/
 
-color red = {255, 0, 0, 255};
-color white = {255, 255, 255, 255};
+//color red = {255, 0, 0, 255};
+//color white = {255, 255, 255, 255};
 
-void output_png(const char* filename, vector<unsigned char>& image)
+
+/*void output_png(const char* filename, vector<unsigned char>& image)
 {
 	//Encode the image
 	unsigned error = lodepng::encode(filename, image, width, height);
 
 	//if there's an error, display it
 	if (error) std::cout << "encoder error " << error << ": " << lodepng_error_text(error) << std::endl;
-}
+}*/
 
-void set_point(vector<unsigned char>& image, size_t x, size_t y, color color)
+/*void set_point(vector<unsigned char>& image, size_t x, size_t y, color color)
 {
 	//int x = x_i;
 	//int y = height - y_i;
@@ -34,9 +35,9 @@ void set_point(vector<unsigned char>& image, size_t x, size_t y, color color)
 	image[4 * width * y + 4 * x + 1] = color.G;
 	image[4 * width * y + 4 * x + 2] = color.B;
 	image[4 * width * y + 4 * x + 3] = color.A;
-}
+}*/
 
-void initial_drawer()
+/*void initial_drawer()
 {
 	vector<unsigned char> image;
 	image.resize(height*width * 4);
@@ -101,7 +102,7 @@ void initial_drawer()
 	}
 
 	output_png("0000.png", image);
-}
+}*/
 
 HH16Sphere::HH16Sphere(fReal radius, size_t nTheta,
         float dt, float DT, int frames,
@@ -129,10 +130,10 @@ void HH16Sphere::run()
     //KaminoTimer timer;
     //timer.startTimer();
 
-	initial_drawer();
-
-    for(int i = 1; i <= frames; i++){
-        while(T < i*DT){
+    for(int i = 1; i <= frames; i++)
+	{
+        while(T < i*DT)
+		{
             solver.stepForward(dt);
             T += dt;
         }

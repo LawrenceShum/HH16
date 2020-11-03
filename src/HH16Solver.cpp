@@ -47,7 +47,7 @@ void HH16Solver::stepForward(fReal timeStep)
 
 	// ADVECTION
 	
-    KaminoTimer timer;
+   // KaminoTimer timer;
     //timer.startTimer();
     advection();
     //this->advectionTime += timer.stopTimer();
