@@ -127,6 +127,7 @@
     <ClInclude Include="..\include\HH16Quantity.h" />
     <ClInclude Include="..\include\HH16Sphere.h" />
     <ClInclude Include="..\include\KaminoTimer.h" />
+    <ClInclude Include="..\include\lodepng.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\CubicSolver.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="..\src\HH16Quantity.cpp" />
     <ClCompile Include="..\src\HH16Solver.cpp" />
     <ClCompile Include="..\src\HH16Sphere.cpp" />
+    <ClCompile Include="..\src\lodepng.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

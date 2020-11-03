@@ -30,6 +30,9 @@
     <ClInclude Include="..\include\KaminoTimer.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\lodepng.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\CubicSolver.cpp">
@@ -57,6 +60,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lodepng.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

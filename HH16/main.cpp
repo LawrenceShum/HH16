@@ -62,6 +62,9 @@ int main(int argc, char** argv)
 	return -1;
 	}
 	*/
+	//radius = 5.0, nTheta = 256,
+	//dt = 0.005, DT = 1.0 / 24.0, frames = 50,
+	//std::string gridPath = "HH16grid/frame"
 	HH16Sphere sim;
 	sim.run();
 	return 0;
